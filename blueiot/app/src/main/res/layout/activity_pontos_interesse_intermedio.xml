@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/backgroundColor"
+    tools:context="com.mieipi.blueiot.views.Pontos_interesse_intermedio">
+
+
+    <!-- Rectangulo azul em cima -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/relativeLayout"
+        android:background="@color/viewName">
+
+        <!-- Titulo da vista -->
+        <TextView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pontos_interesse_view"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="49dp"
+            android:gravity="center_vertical|center|center_horizontal" />
+
+        <!-- Efeito de sombra por baixo do rectangulo azul -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:background="@drawable/drop_shadow"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </View>
+    </RelativeLayout>
+
+    <!-- Espaço total por baixo do rectangulo azul -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_height="fill_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/backgroundColor">
+
+        <!-- Possibilidade de acrescentar novas funcionalidades sem ter de preocupar em redimensionar a vista uma vez que é scrollable -->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_alignParentBottom="false"
+            android:foregroundGravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/scroller"
+            android:scrollbarSize="5dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@drawable/dividers"
+                android:dividerPadding="2.5dp"
+                android:showDividers="middle"
+                android:gravity="center_horizontal">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao butao -->
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_new_2"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Butao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/novo_interesse"
+                        android:id="@+id/button1"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="start_novo_ponto_interesse"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao butao -->
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_interest_point_locations"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Butao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/localizar_interesses"
+                        android:id="@+id/button2"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="start_localizar_pontos_interesse"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

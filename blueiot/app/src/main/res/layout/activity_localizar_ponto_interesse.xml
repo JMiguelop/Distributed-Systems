@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/backgroundColor"
+    tools:context="com.mieipi.blueiot.views.Localizar_ponto_interesse">
+
+
+    <!-- Rectangulo azul em cima -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/relativeLayout"
+        android:background="@color/viewName">
+
+        <!-- Titulo da vista -->
+        <TextView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/localizar_ponto_interesse"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="49dp"
+            android:gravity="center_vertical|center|center_horizontal" />
+
+        <!-- Efeito de sombra por baixo do rectangulo azul -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:background="@drawable/drop_shadow"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </View>
+    </RelativeLayout>
+
+    <!-- Espaço total por baixo do rectangulo azul -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_height="fill_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/backgroundColor">
+
+        <!-- Possibilidade de acrescentar novas funcionalidades sem ter de preocupar em redimensionar a vista uma vez que é scrollable -->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_alignParentBottom="false"
+            android:foregroundGravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/scroller"
+            android:scrollbarSize="5dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@drawable/dividers"
+                android:dividerPadding="2.5dp"
+                android:showDividers="middle"
+                android:gravity="center_horizontal">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao botao -->
+                    <ImageView
+                        android:id="@+id/imageView_todos"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_todos"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- botao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/interesse_todos"
+                        android:id="@+id/bt_todos"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="localizar_ponto_interesse_todos"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao botao -->
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_lazer"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- botao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/interesse_lazer"
+                        android:id="@+id/button1"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="localizar_ponto_interesse_lazer"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao botao -->
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_work"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- botao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/interesse_trabalho"
+                        android:id="@+id/button2"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="localizar_ponto_interesse_work"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao botao -->
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_desporto"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- botao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/interesse_desporto"
+                        android:id="@+id/button3"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="localizar_ponto_interesse_desporto"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao botao -->
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_alimentacao"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- botao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/interesse_alimentacao"
+                        android:id="@+id/button4"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="localizar_ponto_interesse_alimentacao"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

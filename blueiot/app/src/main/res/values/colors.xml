@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="backgroundColor">#ffffff</color>
+    <color name="viewName">#c80059ff</color>
+    <color name="viewName2">#aaffa200</color>
+    <color name="blackDividers">#000000</color>
+    <color name="comDiretaBack1">#55ff0303</color>
+    <color name="comDiretaBack2">#5564ff03</color>
+    <color name="mensagemRecebida">#190059ff</color>
+    <color name="mensagemEnviada">#1500a605</color>
+    <color name="mensagemRecebidaTexto">#0059ff</color>
+    <color name="mensagemEnviadaTexto">#00a605</color>
+</resources>

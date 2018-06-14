@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/backgroundColor"
+    tools:context="com.mieipi.blueiot.Main">
+
+
+    <!-- Rectangulo azul em cima -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/relativeLayout"
+        android:background="@color/viewName">
+        <!--android:background="@drawable/logo_blueiot_4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">-->
+
+        <!-- Titulo da vista -->
+        <TextView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/initialView"
+            android:textColor="#ffffff"
+            android:textSize="50sp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="49dp"
+            android:singleLine="false"
+            android:enabled="false" />
+
+        <!-- Efeito de sombra por baixo do rectangulo azul -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:background="@drawable/drop_shadow"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </View>
+    </RelativeLayout>
+
+    <!-- Espaço total por baixo do rectangulo azul -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_height="fill_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/backgroundColor">
+
+        <!-- Possibilidade de acrescentar novas funcionalidades sem ter de preocupar em redimensionar a vista uma vez que é scrollable -->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_alignParentBottom="false"
+            android:foregroundGravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/scroller"
+            android:scrollbarSize="5dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@drawable/dividers"
+                android:dividerPadding="2.5dp"
+                android:showDividers="middle"
+                android:gravity="center_horizontal">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao butao -->
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_map"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Butao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/localizar_comunicacoes"
+                        android:id="@+id/button1"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="start_comunication_points_location" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao butao -->
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_interest_points"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Butao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/pontos_de_interesse"
+                        android:id="@+id/button2"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="start_pontos_interesse_view"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp">
+
+                    <!-- Imagem associada ao butao -->
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/image_direct_comunication"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Butao com o respetivo texto -->
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:text="@string/comunicacao_directa"
+                        android:id="@+id/button3"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:paddingLeft="60dp"
+                        android:onClick="start_comunicacao_directa_view"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

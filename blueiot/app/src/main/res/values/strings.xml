@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">BlueIot</string>
+
+    <!-- Titulo das Views -->
+    <string name="initialView">BlueIoT</string>
+    <string name="pontos_interesse_view">Pontos\nInteresse</string>
+    <string name="novo_ponto_interesse">Novo\nInteresse</string>
+    <string name="localizar_ponto_interesse">Localizar\nInteresse</string>
+    <string name="comunicacao_direta">Comunicação\nDireta</string>
+    <string name="mensagens_comunicacao_direta">Mensagens</string>
+
+    <!-- Butoes -->
+    <string name="localizar_comunicacoes">Localizar\nComunicações</string>
+    <string name="pontos_de_interesse">Pontos\nInteresse</string>
+    <string name="comunicacao_directa">Comunicação\nDirecta</string>
+    <string name="novo_interesse">Novo\nInteresse</string>
+    <string name="localizar_interesses">Localizar\nInteresses</string>
+    <string name="interesse_todos">Todos</string>
+    <string name="interesse_lazer">Lazer</string>
+    <string name="interesse_trabalho">Trabalho</string>
+    <string name="interesse_desporto">Desporto</string>
+    <string name="interesse_alimentacao">Alimentação</string>
+    <string name="title_activity_localizacao_comunicacoes">Map</string>
+    <string name="escrever_mensagem">"    <u>Escrever mensagem</u>"</string>
+    <string name="enviar_mensagem">Enviar</string>
+
+    <!-- Mensagens para o utilizador provenientes do "LocationFinder" -->
+    <string name="location_services_disconnected">Location services disconnected</string>
+    <string name="location_services_connected">Location services connected</string>
+    <string name="no_location_permission">You do not have permission to access location</string>
+    <string name="network_problem">Unable to get address.\nMake sure you have a internet connection and try again</string>
+    <string name="invalid_lat_long">Invalid latitude and longitude values.\nTry again.</string>
+
+    <!-- Mensagens para o utilizador provenientes do "Novo_ponto_interesse" -->
+    <string name="point_of_interest_in_address_already_exists">You already have this point of interest in your current location</string>
+    <string name="no_address">Unable to get address.\nTry again.</string>
+    <string name="general_error">Something went wrong. Go back and try again</string>
+    <string name="title_activity_localizacao_pontos_interesse">Map</string>
+</resources>
